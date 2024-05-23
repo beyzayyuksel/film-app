@@ -7,9 +7,62 @@
 .logo {
   font-size: 36px;
 }
-.navbar {
-  display: flex;
+.desktopNav {
+  display: none;
   gap: 24px;
   text-transform: uppercase;
   font-size: 12px;
+}
+
+.menuIcon {
+  display: block;
+}
+
+.hamburgerMenuWrapper {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.overlay {
+  flex: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mobileNav {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 64px;
+  background-color: #121212;
+}
+
+.mobileNav a {
+  color: white;
+  text-decoration: none;
+}
+
+.closeIcon {
+  align-self: flex-end;
+  cursor: pointer;
+  margin-right: 24px;
+  color: white;
+}
+
+@media (min-width: 769px) {
+  .desktopNav {
+    display: flex;
+  }
+
+  .menuIcon {
+    display: none;
+  }
+
+  .hamburgerMenuWrapper {
+    display: none;
+  }
 }
